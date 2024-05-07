@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Booking</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .car-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .car {
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .car img {
+            /*width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            height: auto*/
+            width: 100%;
+            height: 150px; /* Set a fixed height for the images */
+            object-fit: contain; /* This property ensures the image fits into the box while maintaining its aspect ratio */
+            border-radius: 8px;
+        }
+
+        .car-info {
+            margin-top: 10px;
+        }
+
+        .rent-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .rent-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Transport Booking</h1>
+        <p>Choose your preferred vehicle and start your journey!</p>
+    </header>
+
+    <div class="car-container">
+        <div class="car">
+            <img src="{{ url_for('static', filename='car1.png') }}" alt="Car 1">
+            <h2>Car 1</h2>
+            <p class="car-info">A stylish jeep with comfortable seating for five passengers. Perfect for a smooth and enjoyable ride.</p>
+            <button class="rent-button" onclick ="booking()">Rent Now</button>
+        </div>
+
+        <div class="car">
+            <img src="{{ url_for('static', filename='car2.png') }}" alt="Car 2">
+            <h2>Car 2</h2>
+            <p class="car-info">A spacious car with ample room for passengers and luggage. Ideal for group travel or family outings.</p>
+            <button class="rent-button" onclick ="booking()">Rent Now</button>
+        </div>
+
+        <div class="car">
+            <img src="{{ url_for('static', filename='car3.png') }}" alt="Car 3">
+            <h2>Car 3</h2>
+            <p class="car-info">An SUV designed for adventure. With advanced safety features and modern amenities,
+            it ensures a secure and comfortable journey.</p>
+            <button class="rent-button" onclick ="booking()">Rent Now</button>
+        </div>
+    </div>
+    <script>
+        function booking()
+        {
+            window.location.href="{{ url_for('booking') }}";
+        }
+
+    </script>
+    
+</body>
+</html>

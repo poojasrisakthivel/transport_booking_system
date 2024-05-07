@@ -1,0 +1,150 @@
+<!---<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskbar Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-image: url('E:\pooja mca\sem 1\python lab\package\images\page1.png');
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .nav button {
+            background-color: #555;
+            color: #fff;
+            padding: 50px 45px;
+            border: none;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 50px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+
+        main {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        
+            <button>Home</button>
+            <button>About</button>
+            <button>Services</button>
+            <button>Contact</button>
+       
+    </nav>
+
+    <main>
+        <h1>Welcome to the Website</h1>
+        <p>Where you can rent cars </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-image: url("{{ url_for('static', filename='page1.jpg') }}");
+            background-size: cover;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+		
+		
+        
+    </style>
+</head>
+<body>
+	<nav>
+        <!--<ul>-->
+            <!--<li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>-->
+           
+            <button onclick ="homepage()">Home</button>
+            <button onclick ="servicepage()">Services</button>
+            <button onclick ="report()">Report</button>
+            <button onclick ="contact()">Contact</button>
+                
+			<h1>Transport Booking</h1>
+        <p>Happy journey </p>
+        <!--</ul>-->
+    </nav>
+    <script>
+        function homepage()
+        {
+            window.location.href="{{ url_for('home') }}";
+        }
+
+        function servicepage()
+        {
+            window.location.href="{{ url_for('service') }}";
+        }
+
+        function report()
+        {
+            window.location.href="{{ url_for('report') }}";
+        }
+        function contact()
+        {
+            window.location.href="{{ url_for('contact') }}";
+        }
+
+    </script>
+   
+</body>
+</html>
+

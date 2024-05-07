@@ -1,0 +1,121 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Flask App</title>-->
+
+    <!-- Link to your CSS file in the static folder -->
+   <!--- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bookingcss.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Flask App</h1>
+        <p>This is a sample HTML page with linked CSS.</p>
+    </div>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Booking Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .aadhar-info {
+            color: #FF0000;
+            font-size: 14px;
+            margin-top: -8px;
+            margin-bottom: 16px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="booking" action="/sumbit" method="post">
+        <h1>Transport Booking Form</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        
+        <label for="hours">Number of Hours:</label>
+        <input type="number" id="hours" name="hours" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="carType">Type of Car:</label>
+        <select id="carType" name="carType" required>
+            <option value="jeep">Jeep</option>
+            <option value="car">Car</option>
+            <option value="suv">SUV</option>
+        </select>
+
+        <label for="aadhar">Aadhar Number:</label>
+        <span class="aadhar-info">Enter a 12-digit Aadhar number</span>
+        <input type="text" id="aadhar" name="aadhar" pattern="[0-9]{12}" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

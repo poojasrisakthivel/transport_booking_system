@@ -1,0 +1,11 @@
+id,Name,Phone,Hours,Email,CarType,Aadhar,Price
+1,Poojasri S,9629920762,2,20x026@psgtech.ac.in,sedan,784512547896,3000
+2,Mirrudu Bashini S,9952730885,3,mirrudubashini.sakthi@gmail.com,sedan,784512547454,4500
+3,bharathi,7854962314,1,bharathi@gmail.com,van,789654123568,1500
+4,sakthi,4589621478,6,sakthi@gmail.com,suv,789654123456,9000
+5,arun,4785123654,5,arun@gmail.com,van,789654123564,7500
+6,vishnu,8745123695,10,vishnu@gmail.com,car,789654123547,15000
+7,ajay,4785632145,8,ajay@gmail.com,suv,789654123547,12000
+8,valli,7896541235,8,valli@gmail.com,jeep,789654125896,12000
+9,ganesh,7854123695,17,ganesh@gmail.com,jeep,785412369541,25500
+10,pratee,7896541257,9,pratee@gmail.com,suv,789654124789,13500
